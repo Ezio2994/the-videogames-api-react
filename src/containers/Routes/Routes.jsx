@@ -6,12 +6,12 @@ import Dashboard from "../Dashboard"
 import About from "../../components/About"
 
 const Routes = (props) => {
-  const { fragrances } = props;
+  const { games } = props;
 
   return (
     <Router>
       <About path="/" />
-      <Dashboard path="dashboard" fragrances={fragrances} />
+      <Dashboard path="dashboard" games={games} />
     </Router>
   );
 };

@@ -6,27 +6,24 @@ const About = () => {
   return (
     <section className={styles.about}>
       <article>
-        <h1>Welcome to The Perfume Api</h1>
-        <h2>Made with datas from <a href="https://www.theperfumeshop.com/" target="_blank" >theperfumeshop</a></h2>
+        <h1>Welcome to The VideoGames Api</h1>
 
         <p>
-          Check out the <Link to="dashboard">dashboard</Link> to see examplases of data you can get from the this API.
+          Check out the <Link to="dashboard">dashboard</Link> to see examplases of data you can get from this API.
         </p>
       </article>
 
       <article>
         <h3>End points:</h3>
-        <h4>To get all the fragrances:</h4>
-        <span>https://the-perfume-api.herokuapp.com/fragrances</span>
+        <h4>To get 25 random videogames:</h4>
+        <span>https://the-videogames-api.herokuapp.com/games</span>
       </article>
       <article>
-        <h4>To get the fragrances by category</h4>
-        <span>https://the-perfume-api.herokuapp.com/fragrances?category=Eau de Toilette</span> <br />
-        <span>https://the-perfume-api.herokuapp.com/fragrances?category=Eau de Parfum</span>
-      </article>
-      <article>
-        <h4>To get fragrances by brand(The brand name must be written all capital letters)</h4>
-        <span>https://the-perfume-api.herokuapp.com/fragrances?brand=</span>
+        <h4>To get the games by Name, Serie, Category or developer</h4>
+        <p>You can get games based on one of the above properties like so:</p>
+        <span>https://the-videogames-api.herokuapp.com/games?serie=name-of-the-serie</span> <br />
+        <p>Or with multiple properties like so</p>
+        <span>https://the-videogames-api.herokuapp.com/games?name=name-of-the-game&serie=name-of-the-serie</span> <br />
       </article>
 
     </section>

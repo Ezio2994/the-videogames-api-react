@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react';
 import './App.scss';
-import Dashboard from "./containers/Dashboard"
 import Routes from "./containers/Routes"
 import NavBar from "./components/NavBar"
 
 function App() {
-  const [fragrances, setFragrances] = useState([])
+  const [games, setGames] = useState([])
 
-  const grabFragrances = () => {
-    fetch(`https://the-perfume-api.herokuapp.com/fragrances`)
+  const grabGames = () => {
+    fetch(`https://the-videogames-api.herokuapp.com/games`)
       .then((res) => res.json())
       .then((res) => {
-        setFragrances(res)
+        setGames(res)
       })
       .catch((err) => {
         console.log(err);
@@ -19,13 +18,13 @@ function App() {
   };
 
   useEffect(() => {
-    grabFragrances()
+    grabGames()
   }, [])
 
   return (
     <div className="App">
       <NavBar />
-      <Routes fragrances={fragrances} />
+      <Routes games={games} />
 
     </div>
   );

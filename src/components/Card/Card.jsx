@@ -4,13 +4,13 @@ import CardFront from "../CardFront"
 import CardBack from "../CardBack"
 
 const Card = (props) => {
-  const { fragrance } = props
+  const { game } = props
   const [side, setSide] = useState("front")
 
   return (
     <div className={styles.card}>
-      <CardFront fragrance={fragrance} side={side} setSide={setSide} />
-      <CardBack fragrance={fragrance} side={side} setSide={setSide} />
+      <CardFront game={game} side={side} setSide={setSide} />
+      <CardBack game={game} side={side} setSide={setSide} />
     </div>
   );
 };

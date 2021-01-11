@@ -3,17 +3,17 @@ import styles from "./CardList.module.scss";
 import Card from "../Card"
 
 const CardList = (props) => {
-  const { fragrances } = props;
+  const { games } = props;
 
 
-  const getCardJsx = (fragrance) => (
-    <div className={styles.card} key={fragrance.id}>
-      <Card fragrance={fragrance} />
+  const getCardJsx = (game) => (
+    <div className={styles.card} key={game.id}>
+      <Card game={game} />
     </div>
   );
 
 
-  return <section className={styles.cards}> {fragrances.map(getCardJsx)}</section>;
+  return <section className={styles.cards}> {games.map(getCardJsx)}</section>;
 
 };
 
